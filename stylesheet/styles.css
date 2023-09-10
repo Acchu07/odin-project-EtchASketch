@@ -29,3 +29,10 @@ body{
     background-color: orange;
 }
 
+h1:hover{
+    background-color: orange;
+}
+
+button{
+    font-size: 5px;
+}
