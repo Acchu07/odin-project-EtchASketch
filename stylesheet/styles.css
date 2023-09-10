@@ -1,0 +1,31 @@
+body{
+    background-color: black;
+    height: 100vh;
+    min-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#parent-container{
+    height: 100px;
+    width: 93vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid orange;
+}
+
+.outerDiv{
+    display: flex;
+    flex-direction: row;
+}
+
+.innerDiv{
+    background-color: white;
+}
+
+.innerDiv2{
+    background-color: orange;
+}
+
