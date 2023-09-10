@@ -3,6 +3,7 @@ let firstTimePageLoad = true;
 const button = document.querySelector('.gridSize');
 button.addEventListener('click',initializeGrid);
 
+
 function setGridSize(gridSize = 16)
 {
     const mainDiv = document.querySelector('#parent-container');
@@ -33,7 +34,7 @@ function getUserInput(){
     let gridSize = +prompt("Enter Size");
     let promptTracker = 0;
     while(gridSize === 0 || gridSize > 50){
-        if(promptTracker > 1){
+        if(promptTracker > 0){
             alert("Setting Grid Size to 16");
             gridSize = 16;
             break;
@@ -56,6 +57,7 @@ function initializeGrid(){
     (firstTimePageLoad)? setGridSize():setGridSize(getUserInput());
     firstTimePageLoad = false;
     permanentEffect.forEach((element)=> element.addEventListener('mouseover',hoverEffectPermanent));
+    permanentEffect.forEach((element)=>element.addEventListener('click',(element)=>element.target.classList.remove('innerDiv2')))
 }
 
 initializeGrid();
