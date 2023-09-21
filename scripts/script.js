@@ -1,7 +1,10 @@
 let permanentEffect;
 let firstTimePageLoad = true;
+let mouseDown = false;
 const button = document.querySelector('.gridSize');
 button.addEventListener('click',initializeGrid);
+document.addEventListener('mousedown',()=> mouseDown = true);
+document.addEventListener('mouseup',()=>mouseDown = false);
 
 
 function setGridSize(gridSize = 16)
@@ -47,6 +50,8 @@ function getUserInput(){
 
 
 function hoverEffectPermanent(element){
+    if(mouseDown === false) return;
+    console.log(mouseDown);
     element.target.classList.add('innerDiv2');
 }
 
